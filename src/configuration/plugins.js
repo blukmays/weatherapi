@@ -1,4 +1,5 @@
 import Pkg from '../../package'
+import WeatherPlugin from '../plugins/weather'
 
 /**
  * Loads plugins
@@ -55,6 +56,9 @@ export default async server => {
         },
       },
     },
+    {
+      plugin:WeatherPlugin
+    }
   ]
 
   await server.register(plugins)
